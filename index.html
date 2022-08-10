@@ -33,15 +33,30 @@
         }
 
         .container-main{
-            width: 300px;
+            width: 500px;
             margin: 0 auto;
+            background-color: aqua;
+            padding: 10px;
         }
         
         .container{
-            background-color: blueviolet;
-            width: 340px;
-            height: 150px;
+            width: 100%;
             padding: 5px
+        }
+
+        .frase{
+            height: 100px;
+            background-color:brown;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .f-btn{
+            min-width: 80%;
+            background-color: blue;
+            height: 30px;
         }
 
         .frase h3{
@@ -49,7 +64,7 @@
         }
 
         .frase span{
-            line-height: 400%;
+
         }
 
         .config-u{
@@ -94,11 +109,14 @@
     </div>
     <div class="container-main">
         <div class="container frase ">
-            <label id="btntxt" class="config-u underline hover-pointer">clique para inserir uma frase</label>
+            <div class="f-btn">
+                <label id="btntxt" class="config-u underline hover-pointer">clique para inserir uma frase</label>
+            </div>
             <div class="msg-resp">
                 <span id="texto" class="config-u">olaa</span>
             </div>
         </div>
+        
     </div>
     
 </body>
