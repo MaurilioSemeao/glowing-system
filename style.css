@@ -24,6 +24,8 @@
         }
 
         .container-main{
+            display: flex;
+            flex-direction: column;
             width: 500px;
             border: 2px solid lightskyblue;
             border-radius: 6px;
@@ -33,7 +35,9 @@
         
         .container{
             width: 100%;
-            padding: 5px
+            padding: 5px;
+            border: 1px solid black;
+            margin-bottom: 10px;
         }
 
         .frase{
@@ -42,6 +46,7 @@
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
+            
         }
 
         .f-btn{
@@ -58,6 +63,59 @@
         .frase span{
             font-size: 25px;
             color: blue;
+        }
+
+        .verifica-val{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            width: 28%;
+            padding: 5px;
+        }
+
+        .inputs input{
+            padding: 5px;
+            margin: 3px;
+        }
+
+        .inputs label{
+            text-align: start;
+            margin-left: 5px;
+        }
+
+        .btn{
+            align-items: flex-start;
+        }
+
+        .item-radio{
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+
+        .item-btn{
+            width: 100%;
+            align-items: center;
+            padding: 1px;
+        }
+
+        .item-btn button{
+            padding: 8px;
+            width: 80%;
+        }
+
+        .result{
+            text-align:left;
+        }
+
+        .result span{
+            margin-left: 5px;
+            margin-bottom: 7px;
         }
 
         .config-u{

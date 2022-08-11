@@ -18,7 +18,7 @@ const insereFrase = () =>{
 
 
  function iniciaEventos(){ 
-     pedeNome()
+     //pedeNome()
      insereFrase();
      
  }
