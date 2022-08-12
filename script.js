@@ -1,6 +1,24 @@
 
+function calcularVerificar(num1,num2,operacao){
+    let resultado = 0;
+    switch(operacao){
+        case "adi":
+            resultado = num1 + num2;
+            break;
+        case "sub":
+            resultado = num1 - num2;
+            break;
+        case "div":
+            resultado = num1 / num2;
+            break;
+        case "mult":
+            resultado = num1 * num2;
+            break;
+    }
+    return resultado;
+}
 
-const calcularEntrada =()=>{
+const verificaOperacao =()=>{
     const btnRadio = document.querySelectorAll("input[name='operacao']")
     for(let i = 0; i < btnRadio.length; i++){
             if(btnRadio[i].checked){
@@ -12,7 +30,7 @@ const calcularEntrada =()=>{
 const btnValidar = () =>{
     const button1 = document.getElementById('button1');
     button1.addEventListener('click', () =>{
-        calcularEntrada();
+    
     });
 }
 
