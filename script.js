@@ -23,14 +23,20 @@ const verificaOperacao =()=>{
     for(let i = 0; i < btnRadio.length; i++){
             if(btnRadio[i].checked){
                 console.log(btnRadio[i].value)
+                return btnRadio[i].value;
             }
     }
 }
 
 const btnValidar = () =>{
     const button1 = document.getElementById('button1');
-    button1.addEventListener('click', () =>{
+    const numero1 = document.getElementById('numero1');
+    const numero2 = document.getElementById('numero2');
     
+    button1.addEventListener('click', () =>{
+        let operador = verificaOperacao();
+        let resultado = calcularVerificar(Number(numero1.value),Number(numero2.value),operador);
+        console.log(resultado);
     });
 }
 
