@@ -1,5 +1,21 @@
 
-function calcularVerificar(num1,num2,operacao){
+function verificaMaiorEmenor(num1,num2){
+     let maior = num1;
+     let menor = num2;
+     let iguais = "nao";
+
+    if(num1 === num2){
+        iguais = "Sim";
+    }
+    if(num1 < num2){
+        maior = num2;
+        menor = num1;
+    }
+        
+    return maior, menor, iguais;
+}
+
+function calcularEntradas(num1,num2,operacao){
     let resultado = 0;
     switch(operacao){
         case "adi":
@@ -22,7 +38,6 @@ const verificaOperacao =()=>{
     const btnRadio = document.querySelectorAll("input[name='operacao']")
     for(let i = 0; i < btnRadio.length; i++){
             if(btnRadio[i].checked){
-                console.log(btnRadio[i].value)
                 return btnRadio[i].value;
             }
     }
@@ -35,8 +50,7 @@ const btnValidar = () =>{
     
     button1.addEventListener('click', () =>{
         let operador = verificaOperacao();
-        let resultado = calcularVerificar(Number(numero1.value),Number(numero2.value),operador);
-        console.log(resultado);
+        let resultado = calcularEntradas(Number(numero1.value),Number(numero2.value),operador);
     });
 }
 
