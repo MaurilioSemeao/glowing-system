@@ -70,6 +70,10 @@
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: flex-end;
+            background-color: rgba(84, 5, 163, 0.658);
+            border-radius: 8px;
+            font-weight: bold;
+            color:whitesmoke;
         }
 
         .txt{
@@ -93,6 +97,14 @@
             margin: 3px;
             background-color:rgba(121, 40, 202, 0.151);
             outline: none;
+            text-align: end;
+            color: whitesmoke;
+        }
+
+        .inputs input::placeholder{
+            color: whitesmoke;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
         }
 
         .inputs label{
@@ -175,6 +187,7 @@
         .item-btn button:active{
             transform: scale(98%);
             box-shadow: 0.2px 0.2px 0.5px;
+            color: aliceblue;
         }
 
         .item-btn button:hover span{
