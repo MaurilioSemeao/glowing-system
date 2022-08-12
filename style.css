@@ -26,7 +26,7 @@
         .container-main{
             display: flex;
             flex-direction: column;
-            width: 500px;
+            width: 800px;
             border: 2px solid lightskyblue;
             border-radius: 6px;
             margin: 0 auto;
@@ -69,19 +69,29 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            align-items: flex-end;
+        }
+
+        .txt{
+            width: 100%;
         }
 
         .item{
             display: flex;
             flex-direction: column;
-            border: 1px solid black;
-            width: 28%;
+            border-radius: 6px;
+            background-color: rgba(117, 24, 211, 0.281);
+            width: 30%;
+            height: 20%;
             padding: 5px;
         }
 
         .inputs input{
+            border-radius: 3px;
+            border: 1px solid rgba(110, 20, 201, 0.568);
             padding: 5px;
             margin: 3px;
+            background-color:rgba(121, 40, 202, 0.151);
         }
 
         .inputs label{
@@ -107,6 +117,10 @@
         .item-btn button{
             padding: 8px;
             width: 80%;
+            color: rgba(110, 20, 201, 0.568);
+            background-color: azure;
+            border: 1px solid;
+            border-radius: 3px;
         }
 
         .result{
@@ -114,8 +128,7 @@
         }
 
         .result span{
-            margin-left: 5px;
-            margin-bottom: 7px;
+            margin: 5px;
         }
 
         .config-u{
