@@ -236,10 +236,43 @@
         @media (max-width: 767px) {
             .verifica-val{
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
 
             .item{
-                width: 100%;
+                display: flex;
+                align-items:center;
+                width: 90%;
                 margin-bottom: 10px;
             }
+
+            .item-radio input{
+                position: absolute;
+                left: 42%;
+            }
+
+            .item-radio label{
+                left: 30%;
+                margin-top: 2px;
+                margin-bottom: 5px;
+            }
+
+            .item-btn button{
+                max-width: 150px;
+            }
+
+            .result{
+                
+            }
+
+            .result >span>span:first-child:first-child{
+                left: 110%;
+            }
+
+            .result >span{
+                transform: translate(-50%);
+            }
+
+
         }
