@@ -1,4 +1,36 @@
 
+function retornoTela(verificador = true){
+    const retorno = document.getElementById("retorno");
+    let menssagen = "Numero inserido Calculado";
+        retorno.style.color = "green";
+    if(verificador === false){
+        menssagen = "Numero inserido Invalido";
+        retorno.style.color = "red";
+    }
+
+    retorno.innerHTML = menssagen;
+}
+
+function tabuada(num1,auto){
+    if(num1 > 10){
+        return false;
+    }
+    const divTela = document.getElementById('divtela');
+    const newResult= document.createElement('span');
+
+    let mult =(`${auto} X ${num1} = ${auto * num1}`);
+    let texto = document.createTextNode(mult);
+
+    newResult.classList.add('result-tabuada');
+    newResult.appendChild(texto)
+    divTela.appendChild(newResult);
+    
+    if(auto < 10)
+    tabuada(num1,++auto);
+    // console.log(auto);
+
+}
+
 function escreveTela(valores=[], resultado){
     let maior = document.getElementById('maior');
     let menor = document.getElementById('menor');
@@ -55,6 +87,16 @@ const verificaOperacao =()=>{
     }
 }
 
+const btnCalcularTabuada = () =>{
+    const btnCal = document.getElementById('button2');
+    const numero = document.getElementById('numtb');
+
+    btnCal.addEventListener('click', () =>{
+        let verifica = tabuada(Number(numero.value),0);
+            retornoTela(verifica)
+    });
+}
+
 const btnValidar = () =>{
     const button1 = document.getElementById('button1');
     const numero1 = document.getElementById('numero1');
@@ -89,6 +131,7 @@ const insereFrase = () =>{
      //pedeNome()
      insereFrase();
      btnValidar();
+     btnCalcularTabuada();
      
      
  }
