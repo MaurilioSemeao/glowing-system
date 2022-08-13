@@ -1,4 +1,16 @@
 
+function escreveTela(valores=[], resultado){
+    let maior = document.getElementById('maior');
+    let menor = document.getElementById('menor');
+    let iguais = document.getElementById('iguais');
+    let resTela = document.getElementById('resultado');
+
+    maior.innerHTML = valores[0];
+    menor.innerHTML = valores[1];
+    iguais.innerHTML = valores[2];
+    resTela.innerHTML = resultado.toString(); 
+}
+
 function verificaMaiorEmenor(num1,num2){
      let maior = num1;
      let menor = num2;
@@ -11,8 +23,8 @@ function verificaMaiorEmenor(num1,num2){
         maior = num2;
         menor = num1;
     }
-        
-    return maior, menor, iguais;
+        let resultado=[maior,menor,iguais];
+    return resultado;
 }
 
 function calcularEntradas(num1,num2,operacao){
@@ -49,8 +61,10 @@ const btnValidar = () =>{
     const numero2 = document.getElementById('numero2');
     
     button1.addEventListener('click', () =>{
+        const verificaNum = verificaMaiorEmenor(numero1.value, numero2.value);
         let operador = verificaOperacao();
         let resultado = calcularEntradas(Number(numero1.value),Number(numero2.value),operador);
+        escreveTela(verificaNum, resultado);
     });
 }
 
