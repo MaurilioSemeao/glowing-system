@@ -26,7 +26,7 @@
         .container-main{
             display: flex;
             flex-direction: column;
-            width: 800px;
+            max-width: 700px;
             border: 2px solid lightskyblue;
             border-radius: 6px;
             margin: 0 auto;
@@ -121,6 +121,11 @@
             margin-bottom: 5px;
         }
 
+        .item-radio input{
+            width: 20px;
+            height: 20px;
+        }
+
         .item-btn{
             width: 100%;
             align-items: center;
@@ -147,11 +152,20 @@
         }
 
         .result{
+            position: relative;
             text-align:left;
+            overflow: hidden;
         }
 
-        .result span{
+        .result >span{
             margin: 5px;
+        }
+
+        .result >span>span:first-child:first-child{
+            border-radius: 5px;
+            background-color:rgba(141, 54, 228, 0.603);
+            position: absolute;
+            left: 50%;
         }
 
         .config-u{
@@ -217,4 +231,15 @@
 
         .hover-pointer:hover{
             cursor: pointer;
+        }
+
+        @media (max-width: 767px) {
+            .verifica-val{
+                flex-direction: column;
+            }
+
+            .item{
+                width: 100%;
+                margin-bottom: 10px;
+            }
         }
