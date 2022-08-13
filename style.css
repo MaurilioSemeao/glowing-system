@@ -5,7 +5,7 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-       
+
         body{
             text-align: center;
         }
@@ -32,7 +32,7 @@
             margin: 0 auto;
             padding: 10px;
         }
-        
+
         .container{
             width: 100%;
             padding: 5px;
@@ -46,7 +46,7 @@
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
-            
+
         }
 
         .f-btn{
@@ -129,21 +129,19 @@
         }
 
         .item-btn{
-            width: 100%;
-            align-items: center;
-            padding: 1px;
+            margin: auto;
         }
 
         .item-btn button{
             padding: 8px;
-            width: 80%;
+            width: 100%;
             color: rgba(110, 20, 201, 0.568);
             background-color: azure;
             border: 1px solid;
             border-radius: 3px;
             box-shadow: 1px 2px 5px rgba(110, 20, 201, 0.568);
             position: relative;
-          
+
         }
 
         .item-btn span{
@@ -175,6 +173,44 @@
             display: inline-block;
         }
 
+        /* style tabuada */
+
+        .tabuada{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item{
+            flex-grow: 1;
+            margin: 3px;
+        }
+        .entradas{
+            /* flex-grow: 1; */
+            min-height: 13rem;
+            align-self: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .entradas label{
+            font-size: 20px;
+        }
+
+        .entradas input{
+            max-width: 30%;
+            
+        }
+
+        .entradas button{
+            max-width: 30%;
+        }
+
+        .resultado{
+            /* flex-grow: 1; */
+            min-height: 20rem;
+        }
+
         /* style transition */
 
         .inputs input:focus{
@@ -192,9 +228,9 @@
             transition: transform 0.18s linear;
             position: absolute;
             background-color: blueviolet;
-           
+
         }
-        
+
         .item-btn button:hover::before{
             transform-origin: top left;
             transform: scaleX(1);
@@ -227,7 +263,7 @@
         .underline:hover::after{
             transform-origin: bottom left;
             transform: scaleX(1);
-            
+
         }
 
         .hover-pointer:hover{
