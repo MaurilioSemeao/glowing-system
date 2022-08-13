@@ -257,7 +257,7 @@
             transform: scaleX(0);
             transform-origin: bottom right;
             transition: transform 0.25s linear;
-            background: rgb(71, 0, 141);
+            background: rgba(182, 117, 247, 0.76);
         }
 
         .underline:hover::after{
@@ -266,7 +266,7 @@
 
         }
 
-        .hover-pointer:hover{
+        .hover-pointer button ,input, label:hover{
             cursor: pointer;
         }
 
@@ -281,8 +281,6 @@
                 display: flex;
                 align-items:center;
                 width: 80%;
-                margin-bottom: 1rem;
-                margin-top: 1rem;
             }
 
             .inputs input{
