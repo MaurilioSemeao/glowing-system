@@ -153,19 +153,21 @@
 
         .result{
             position: relative;
-            text-align:left;
+            text-align:end;
             overflow: hidden;
         }
 
         .result >span{
+            position: relative;
             margin: 5px;
+            right: 50%;
         }
 
         .result >span>span:first-child:first-child{
             border-radius: 5px;
             background-color:rgba(141, 54, 228, 0.603);
             position: absolute;
-            left: 50%;
+            right:-15px;
         }
 
         .config-u{
@@ -206,9 +208,28 @@
             max-width: 30%;
         }
 
+        .numvalido{
+            color: green;
+        }
+
+        .numerro{
+            color: red;
+        }
+
         .resultado{
             /* flex-grow: 1; */
             min-height: 20rem;
+            justify-content: space-evenly;
+        }
+
+        #divtela{
+            flex-grow: 0;
+        }
+
+        .result-tabuada{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: larger;
+            text-shadow: 1px 2px 3px black;
         }
 
         /* style transition */
@@ -307,12 +328,8 @@
                 max-width: 150px;
             }
 
-            .result >span>span:first-child:first-child{
-                left: 112%;
-            }
-
-            .result >span{
-                transform: translateX(-50%);
+            .result{
+                align-items: stretch;
             }
 
 
