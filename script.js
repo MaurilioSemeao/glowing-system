@@ -2,17 +2,19 @@
 function retornoTela(verificador = true){
     const retorno = document.getElementById("retorno");
     let menssagen = "Numero inserido Calculado";
-        retorno.style.color = "green";
+        retorno.classList.remove('numerro')
+        retorno.classList.add('numvalido');
     if(verificador === false){
         menssagen = "Numero inserido Invalido";
-        retorno.style.color = "red";
+        retorno.classList.remove('numvalido')
+        retorno.classList.add('numerro');
     }
 
     retorno.innerHTML = menssagen;
 }
 
 function tabuada(num1,auto){
-    if(num1 > 10){
+    if(num1 < 1 || num1 > 10 || num1==""){
         return false;
     }
     const divTela = document.getElementById('divtela');
