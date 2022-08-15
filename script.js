@@ -44,7 +44,7 @@ function tabuada(num1,auto){
     const newResult= document.createElement('span');
 
     if(divTela.childElementCount > 10)
-        divTela.innerHTML = " ";
+        divTela.innerHTML = undefined;
 
     let mult =(`${auto} X ${num1} = ${auto * num1}`);
     let texto = document.createTextNode(mult);
