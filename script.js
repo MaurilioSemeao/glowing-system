@@ -1,4 +1,27 @@
 
+
+function mudaFrase(){
+    const divInput = document.getElementsByClassName("item");
+    const textoh3 = document.getElementById('textoh3');
+    const textoOriginal = textoh3.innerHTML;
+
+    divInput[0].addEventListener('mouseover',() => {
+        textoh3.innerHTML = "Digite os Valores Numéricos "
+    },false);
+    divInput[1].addEventListener('mouseover',() => {
+        textoh3.innerHTML = "Selecione a Operação Desejada"
+    },false);
+    divInput[2].addEventListener('mouseover',() => {
+        textoh3.innerHTML = "Verifique o Resualtado"
+    },false);
+    
+    for(let i in divInput){
+        divInput[i].addEventListener('mouseout',() => {
+            textoh3.innerHTML = textoOriginal;
+        });
+    }    
+}
+
 function retornoTela(verificador = true){
     const retorno = document.getElementById("retorno");
     let menssagen = "Numero inserido Calculado";
@@ -19,6 +42,9 @@ function tabuada(num1,auto){
     }
     const divTela = document.getElementById('divtela');
     const newResult= document.createElement('span');
+
+    if(divTela.childElementCount > 10)
+        divTela.innerHTML = " ";
 
     let mult =(`${auto} X ${num1} = ${auto * num1}`);
     let texto = document.createTextNode(mult);
@@ -134,6 +160,7 @@ const insereFrase = () =>{
      insereFrase();
      btnValidar();
      btnCalcularTabuada();
+     mudaFrase();
      
      
  }
